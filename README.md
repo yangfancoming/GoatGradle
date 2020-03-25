@@ -1,6 +1,6 @@
 
 # 目录
-    chapter0-0-8  基于gradle java
+    chapter0-0-8  基于gradle java         dependencies 脚本
     chapter0-0-9  基于gradle java + web
     
     chapter1-0-5  gradle 脚本构建

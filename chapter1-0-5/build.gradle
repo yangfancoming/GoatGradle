@@ -16,7 +16,12 @@ dependencies {
 }
 
 
+
+
 task foo {
+    println name + "---" // 任务名称
+    println project.name  + "---" // 模块名称
+
     10.times { print "$it " } //  n.times 函数，表示循环n次，循环变量it从0开始到n结束
 }
 
@@ -58,3 +63,33 @@ hello.doFirst {
 hello.doLast {
     println 'doLast222'
 }
+
+
+task upper {
+    String expString = 'YiiBai gradle tutorials'
+    println "Original: " + expString
+    println "Upper case: " + expString.toUpperCase()
+}
+
+
+task groovyJDKMethod {
+    "Yiibai".each() {
+        println "${it}"
+    }
+}
+
+
+
+/**
+ * Project 工程属性：
+ * Name   Type          Default Value
+ * project	    Project	The Project instance
+ * name	        String	The name of the project directory.
+ * path	        String	The absolute path of the project.
+ * description	String	A description for the project.
+ * projectDir	File	The directory containing the build script.
+ * buildDir	    File	projectDir/build
+ * group	    Object	unspecified
+ * version	    Object	unspecified
+ * ant	        AntBuilder	An AntBuilder instance
+*/
