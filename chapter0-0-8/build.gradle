@@ -1,3 +1,9 @@
+
+
+// 使用groovy脚本语言编写
+
+
+// 插件集合：表示引入java插件
 plugins {
     id 'java'
 }
@@ -7,10 +13,12 @@ version '1.0-SNAPSHOT'
 
 sourceCompatibility = 1.8
 
+// 指定jar从哪里下载 
 repositories {
     mavenCentral()
 }
 
+// 当前模块依赖 相当于 maven的 <dependencies> 
 dependencies {
 //    testCompile group: 'junit', name: 'junit', version: '4.12'
 
