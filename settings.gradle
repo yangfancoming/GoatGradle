@@ -1,3 +1,4 @@
 rootProject.name = 'GoatGradle'
 include 'chapter0-0-8'
+include 'chapter0-0-9'
 
