@@ -1,4 +1,11 @@
 rootProject.name = 'GoatGradle'
+
+//分层布局的多项目构建settings.gradle文件
 include 'chapter0-0-8'
 include 'chapter0-0-9'
+
+
+
+println 'my name is settings.gradle! This is executed during the initialization phase.'
+include 'chapter1-0-5'
 
