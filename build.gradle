@@ -20,12 +20,3 @@ dependencies {
 
 println 'This is executed during the configuration phase.'
 
-task configured {
-    println 'my name is build.gradle!'
-}
-
-task hello {
-    doLast {
-        println 'Hello world!'
-    }
-}

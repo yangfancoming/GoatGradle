@@ -14,3 +14,47 @@ repositories {
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
 }
+
+
+task foo {
+    10.times { print "$it " } //  n.times 函数，表示循环n次，循环变量it从0开始到n结束
+}
+
+
+task bar(dependsOn: foo) { // bar 依赖 foo 依赖的任务只需要存在，不分先后顺序，也就是懒依赖 Lazy dependsOn
+    println "I'm Gradle"
+}
+
+
+
+// Dynamic tasks 动态的任务  构建了四个任务  task0,task1,task2,task3
+task test1 {
+    4.times { counter ->
+        task "task$counter" {
+            println "I'm task number $counter"
+        }
+    }
+}
+
+//doFirst：任务执行前执行，从最后一个向前执行
+//doLast：任务执行后执行，从第一个向后执行
+task hello  {  //  故意将doFirst和doLast位置打乱
+    println 'Hello Earth'
+}
+
+hello.doLast {
+    println 'doLast111'
+}
+hello.doFirst {
+    println 'doFirst333'
+}
+hello.doFirst {
+    println 'doFirst222'
+}
+
+hello.doFirst {
+    println 'doFirst111'
+}
+hello.doLast {
+    println 'doLast222'
+}
