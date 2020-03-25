@@ -1,0 +1,3 @@
+rootProject.name = 'GoatGradle'
+include 'chapter0-0-8'
+
